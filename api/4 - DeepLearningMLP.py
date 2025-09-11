@@ -96,6 +96,8 @@ EmotionIA = keras.Sequential([
     keras.layers.Dense(1, activation='sigmoid')
 ])
 
+# Compilar o modelo
 EmotionIA.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 
+# Treinar o modelo
 EmotionIA.fit(X_train, y_train, epochs=30, batch_size=8, verbose=1)
