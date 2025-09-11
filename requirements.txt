@@ -1,0 +1,36 @@
+# 🎓 IT Valley School - Emotion Analysis Project
+# Machine Learning & AI Postgraduate Program
+# Dependencies for Emotion Classification Models
+
+# Core Machine Learning Libraries
+numpy>=1.21.0
+pandas>=1.3.0
+scikit-learn>=1.0.0
+joblib>=1.1.0
+
+# Deep Learning Framework
+tensorflow>=2.8.0
+keras>=2.8.0
+
+# Natural Language Processing
+nltk>=3.7
+
+# Data Visualization (for future enhancements)
+matplotlib>=3.5.0
+seaborn>=0.11.0
+
+# Development Tools
+jupyter>=1.0.0
+ipython>=7.0.0
+
+# Model Evaluation
+plotly>=5.0.0  # For interactive performance charts
+
+# Text Processing
+regex>=2022.1.18
+
+# Progress Tracking
+tqdm>=4.62.0
+
+# Configuration Management
+pyyaml>=6.0
