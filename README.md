@@ -212,9 +212,11 @@ This project demonstrates:
 
 ## 📞 Contact & Collaboration
 
-**Student**: [Your Name]  
+**Student**: Maycon Mancilha  
 **Institution**: IT Valley School  
 **Program**: AI & Machine Learning Postgraduate  
+**Email**: [mancilhamaycon@gmail.com](mailto:mancilhamaycon@gmail.com)  
+**LinkedIn**: [linkedin.com/in/mayconmancilha](https://www.linkedin.com/in/mayconmancilha/)  
 **GitHub**: [@mmancilha](https://github.com/mmancilha)  
 **Objective**: Seeking international opportunities in AI/ML
 

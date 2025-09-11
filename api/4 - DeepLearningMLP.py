@@ -101,3 +101,5 @@ EmotionIA.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accura
 
 # Treinar o modelo
 EmotionIA.fit(X_train, y_train, epochs=30, batch_size=8, verbose=1)
+
+
