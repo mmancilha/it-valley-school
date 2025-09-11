@@ -8,7 +8,7 @@
 [![Status](https://img.shields.io/badge/Status-Active-brightgreen.svg)](https://github.com/mmancilha/it-valley-school)
 [![IT Valley School](https://img.shields.io/badge/IT%20Valley%20School-AI%20%26%20ML-purple.svg)](https://br.itvalleyschool.com/)
 [![International Ready](https://img.shields.io/badge/International-Ready-gold.svg)](docs/project-overview.md)
-[![Best Model](https://img.shields.io/badge/Best%20Accuracy-67%25-success.svg)](docs/random-forest-model.md)
+[![Best Model](https://img.shields.io/badge/Best%20Accuracy-78%25-success.svg)](docs/deep-learning-mlp-model.md)
 [![Models](https://img.shields.io/badge/Models-4-blue.svg)](api/)
 [![Documentation](https://img.shields.io/badge/Docs-Complete-brightgreen.svg)](docs/)
 
@@ -26,7 +26,7 @@ This repository showcases a comprehensive emotion analysis system that classifie
 | 🔢 Logistic Regression | 33% | Baseline | Simple linear classifier | ✅ Complete |
 | 🎯 Support Vector Machine | 62% | +29% | Kernel-based classification | ✅ Complete |
 | 🌲 Random Forest | **67%** | +5% | **Ensemble method, best performer** | ✅ Complete |
-| 🧠 Deep Learning MLP | TBD | TBD | Neural network with embeddings | 🔄 In Progress |
+| 🧠 Deep Learning MLP | **78%** | +11% | **Optimized neural network with LSTM** | ✅ Complete |
 
 ### 📈 Performance Evolution Visualization
 
@@ -36,17 +36,17 @@ Accuracy Progress:
 33% ████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░ Logistic Regression
 62% ███████████████████████████████████████████████████░░░░░░░░░░░░░░░░░░░░░ SVM (+29%)
 67% ██████████████████████████████████████████████████████████░░░░░░░░░░░░░░ Random Forest (+5%)
-??% ████████████████████████████████████████████████████████████████████████ Deep Learning (Target: 70%+)
+78% ███████████████████████████████████████████████████████████████████████████████████████████████████ Deep Learning (+11%)
 
     0%    10%   20%   30%   40%   50%   60%   70%   80%   90%   100%
 ```
 
 ### 📈 Performance Analysis
 
-- **67% improvement** from baseline to best model (33% → 67%)
-- **Random Forest** achieved the highest accuracy with traditional ML
-- **Dataset expansion** and **language standardization** contributed to better performance
-- **Deep Learning model** represents the cutting-edge approach with potential for further optimization
+- **136% improvement** from baseline to best model (33% → 78%)
+- **Deep Learning MLP** achieved the highest accuracy, surpassing traditional ML
+- **Advanced architecture** with LSTM, dropout, and optimized hyperparameters
+- **Dataset expansion** to 150 balanced sentences improved generalization
 
 ## 🏗️ Project Structure
 
@@ -60,7 +60,8 @@ emotion-analysis/
 │   └── 4-DeepLearningMLP.py       # Neural network approach
 ├── 📁 models/                      # Trained models
 │   ├── EmotionIA_RF_model.pkl     # Production-ready Random Forest
-│   └── tfidf_vectorizer.pkl       # Feature extraction pipeline
+│   ├── tfidf_vectorizer.pkl       # Feature extraction pipeline
+│   └── EmotionIA_mlp.h5           # Optimized deep learning model
 ├── 📁 docs/                       # Comprehensive documentation
 │   ├── project-overview.md        # Academic portfolio overview
 │   ├── logistic-regression-model.md # Baseline model details
@@ -88,12 +89,14 @@ emotion-analysis/
 - **English stopwords** removal
 - **Model persistence** for production use
 
-#### 🧠 Deep Learning MLP
-- **Embedding layer**: 32-dimensional word embeddings
-- **Dense layers**: 64 neurons with ReLU activation
-- **Output layer**: Sigmoid activation for binary classification
-- **Optimizer**: Adam with binary crossentropy loss
-- **Dataset**: 100 balanced sentences (50 happy + 50 sad)
+#### 🧠 Deep Learning MLP (Best Performer)
+- **Embedding layer**: 64-dimensional word embeddings
+- **LSTM layer**: 32 units for sequence processing
+- **Regularization**: SpatialDropout1D (0.3) and Dropout (0.4, 0.2)
+- **Dense layers**: 64→32→1 neurons with ReLU activation
+- **Optimizer**: Adam with learning rate 0.001
+- **Advanced training**: EarlyStopping, ReduceLROnPlateau callbacks
+- **Dataset**: 150 balanced sentences (75 happy + 75 sad)
 
 ## 🛠️ Setup & Installation
 
