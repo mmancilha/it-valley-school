@@ -26,7 +26,7 @@ This repository showcases a comprehensive emotion analysis system that classifie
 | 🔢 Logistic Regression | 33% | Baseline | Simple linear classifier | ✅ Complete |
 | 🎯 Support Vector Machine | 62% | +29% | Kernel-based classification | ✅ Complete |
 | 🌲 Random Forest | **67%** | +5% | **Ensemble method, best performer** | ✅ Complete |
-| 🧠 Deep Learning MLP | **78%** | +11% | **Optimized neural network with LSTM** | ✅ Complete |
+| 🧠 Deep Learning MLP | **84%** | +17% | **Optimized neural network with LSTM** | ✅ Complete |
 
 ### 📈 Performance Evolution Visualization
 

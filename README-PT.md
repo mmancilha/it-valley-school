@@ -2,7 +2,7 @@
 
 [![IT Valley School](https://img.shields.io/badge/IT%20Valley%20School-Pós%20Graduação%20IA%20%26%20ML-blue?style=for-the-badge&logo=graduation-cap)](https://itvalley.school)
 [![Preparação Internacional](https://img.shields.io/badge/Preparação-Internacional-green?style=for-the-badge&logo=globe)](https://github.com/mmancilha)
-[![Melhor Modelo](https://img.shields.io/badge/Melhor%20Acurácia-78%25-brightgreen?style=for-the-badge&logo=chart-line)](https://github.com/mmancilha/it-valley-school)
+[![Melhor Modelo](https://img.shields.io/badge/Melhor%20Acurácia-84%25-brightgreen?style=for-the-badge&logo=chart-line)](https://github.com/mmancilha/it-valley-school)
 [![Modelos](https://img.shields.io/badge/Modelos-4%20Implementados-orange?style=for-the-badge&logo=brain)](https://github.com/mmancilha/it-valley-school)
 [![Documentação](https://img.shields.io/badge/Documentação-Completa-purple?style=for-the-badge&logo=book)](https://github.com/mmancilha/it-valley-school)
 
@@ -23,7 +23,7 @@ Este projeto demonstra a implementação e comparação de **4 algoritmos de Mac
 | **Regressão Logística** | 33% | Baseline | Interpretabilidade, rapidez | ✅ Completo |
 | **SVM (Support Vector Machine)** | 62% | +29% | Robustez, kernel RBF | ✅ Completo |
 | **Random Forest** | 67% | +5% | Ensemble, feature importance | ✅ Completo |
-| **Deep Learning MLP** | **78%** | +11% | **Redes neurais otimizadas com LSTM** | ✅ Completo |
+| **Deep Learning MLP** | **84%** | +17% | **Redes neurais otimizadas com LSTM** | ✅ Completo |
 
 ## 📈 Visualização da Evolução de Performance
 
@@ -33,7 +33,7 @@ Progresso de Acurácia dos Modelos:
 Regressão Logística  ████████████████████ 33%
 SVM                  ████████████████████████████████████ 62%
 Random Forest        ██████████████████████████████████████████ 67%
-Deep Learning MLP    ████████████████████████████████████████████████████████████████████████████ 78%
+Deep Learning MLP    ████████████████████████████████████████████████████████████████████████████████████ 84%
 Meta (Futuro)        ████████████████████████████████████████████████████████████████████████████████████ 80%+
                      0%    20%    40%    60%    80%    100%
 ```
@@ -110,7 +110,7 @@ python api/4-DeepLearningMLP.py
 ## 📊 Resultados e Métricas
 
 ### Performance Geral
-- **Melhor Modelo**: Deep Learning MLP (78% acurácia)
+- **Melhor Modelo**: Deep Learning MLP (84% acurácia)
 - **Mais Rápido**: Regressão Logística
 - **Mais Robusto**: SVM
 - **Mais Complexo**: Deep Learning MLP
