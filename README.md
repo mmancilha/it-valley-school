@@ -90,6 +90,7 @@ emotion-analysis/
 - **Model persistence** for production use
 
 #### 🧠 Deep Learning MLP (Best Performer)
+- **Model Architecture**: 267,000 trainable parameters
 - **Embedding layer**: 64-dimensional word embeddings
 - **LSTM layer**: 32 units for sequence processing
 - **Regularization**: SpatialDropout1D (0.3) and Dropout (0.4, 0.2)
