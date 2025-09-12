@@ -3,6 +3,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score
 import joblib
+import pickle
 
 # Expanding dataset with English sentences / Expandindo o conjunto de dados com frases em inglês
 sentences = [
@@ -61,3 +62,7 @@ joblib.dump(EmotionIA, 'EmotionIA_RF_model.pkl')
 joblib.dump(vectorizer, 'tfidf_vectorizer.pkl')
 
 print("Model and vectorizer saved successfully!")
+
+# Salvar o Tokenizador
+with open('vectorizer.pkl', 'wb') as file:
+    pickle.dump(vectorizer, file)

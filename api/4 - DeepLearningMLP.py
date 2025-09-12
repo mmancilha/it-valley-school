@@ -4,7 +4,8 @@ import tensorflow as tf # Biblioteca para deep learning
 from sklearn.model_selection import train_test_split # Biblioteca para divisão de dados
 from tensorflow import keras # Biblioteca para deep learning
 from sklearn.metrics import accuracy_score
-
+import pickle # Biblioteca para serialização de objetos
+import tensorflow as tf
 # Dataset expandido de frases -> (X) vetorizar
 sentences = [
     # HAPPY (1) / FELIZ (1) - Expandido para 75 frases
@@ -118,7 +119,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, labels, test_size=0.3, ra
 
 # Começo da criação do modelo - Arquitetura balanceada
 EmotionIA = keras.Sequential([
-    keras.layers.Embedding(input_dim=vocab_size, output_dim=64, mask_zero=True),  # Embedding otimizado
+    keras.layers.Embedding(input_dim=vocab_size, output_dim=512, mask_zero=True),  # Embedding otimizado
     keras.layers.SpatialDropout1D(0.3),  # Dropout para regularização
     keras.layers.LSTM(32, dropout=0.2, recurrent_dropout=0.2),  # LSTM simplificado
     keras.layers.Dense(64, activation='relu'),  # Camada densa
@@ -161,5 +162,17 @@ accuracy_nn = accuracy_score(y_test, y_pred_nn)
 print(f"Deep Neural Network (Optimized) Accuracy: {accuracy_nn:.2f}")
 
 # Salvar o modelo
-EmotionIA.save('../models/EmotionIA_mlp.h5')
-print("Modelo salvo como '../models/EmotionIA_mlp.h5'!")
+import os
+models_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'models')
+os.makedirs(models_dir, exist_ok=True)
+model_path = os.path.join(models_dir, 'EmotionIA_mlp.h5')
+EmotionIA.save(model_path)
+print(f"Modelo salvo como '{model_path}'!")
+
+# Salvar o Tokenizador
+vectorizer_path = os.path.join(models_dir, 'vectorizer.pkl')
+with open(vectorizer_path, 'wb') as file:
+    pickle.dump(vectorizer, file)
+print(f"Vectorizer salvo como '{vectorizer_path}'!")
+
+print("Model and vectorizer saved successfully!")
