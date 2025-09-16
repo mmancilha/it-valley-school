@@ -5,9 +5,9 @@ from sklearn.metrics import accuracy_score
 import joblib
 import pickle
 
-# Expanding dataset with English sentences / Expandindo o conjunto de dados com frases em inglês
+# Expandindo o conjunto de dados com frases em inglês
 sentences = [
-    # HAPPY (1) / FELIZ (1)
+    # FELIZ (1)
     "I am very happy today!", "What a wonderful day!", "I won a prize, I am excited!",
     "I love being with my family.", "Today is an amazing day!", "Life is wonderful!",
     "I am radiant with happiness!", "What an amazing news, I am thrilled!",
@@ -18,7 +18,7 @@ sentences = [
     "I am extremely satisfied with everything in my life!", "Happiness lives inside me!",
     "Nothing can ruin this incredible day!", "It is wonderful to have amazing friends!",
 
-    # SAD (0) / TRISTE (0)
+    # TRISTE (0)
     "This makes me very sad.", "I am depressed and unmotivated.", "Nothing makes sense, I am discouraged.",
     "I am crying with sadness.", "I feel a huge emptiness inside me.", "I have no energy to do anything.",
     "My day was horrible, I am exhausted.", "I am feeling completely alone.",
@@ -30,39 +30,43 @@ sentences = [
     "I am tired of everything, I just want to disappear.", "My heart is heavy with so much anguish.",
 ]
 
-# Creating labels (happy = 1, sad = 0) / Criando rótulos (feliz = 1, triste = 0)
-labels = [1] * 20 + [0] * 20 # Now we have 40 balanced sentences! / Agora temos 40 frases balanceadas!
+# Criando rótulos (feliz = 1, triste = 0)
+labels = [1] * 20 + [0] * 20  # Agora temos 40 frases balanceadas!
 
-# Creating the TF-IDF vectorizer with bigrams and removing English stopwords / Criando o vetorizador TF-IDF com bigramas e removendo stopwords em inglês
+# Criando o vetorizador TF-IDF com bigramas e removendo stopwords em inglês
 vectorizer = TfidfVectorizer(ngram_range=(1,2), stop_words='english')
 X = vectorizer.fit_transform(sentences).toarray()
 
-# Display vocabulary words / Exibir palavras do vocabulário
-print("Vocabulary words:", vectorizer.get_feature_names_out())
+# Exibir palavras do vocabulário
+print("Palavras do vocabulário:", vectorizer.get_feature_names_out())
 
-# Train the model / Treinar o modelo
-# Splitting data into training (70%) and testing (30%) / Dividindo os dados em treinamento (70%) e teste (30%)
+# Treinar o modelo
+# Dividindo os dados em treinamento (70%) e teste (30%)
 X_train, X_test, y_train, y_test = train_test_split(X, labels, test_size=0.3, random_state=42)
 
-# Creating and training the Random Forest model / Criando e treinando o modelo Random Forest
+# Criando e treinando o modelo Random Forest
 EmotionIA = RandomForestClassifier(n_estimators=100, random_state=42)
 EmotionIA.fit(X_train, y_train)
 
-# Making predictions / Fazendo previsões
+# Fazendo previsões
 y_pred_rf = EmotionIA.predict(X_test)
 
-# Evaluating the model / Avaliando o modelo
+# Avaliando o modelo
 accuracy_rf = accuracy_score(y_test, y_pred_rf)
-print(f"Random Forest model accuracy: {accuracy_rf:.2f}")
+print(f"Acurácia do modelo Random Forest: {accuracy_rf:.2f}")
 
-# Saving the trained model / Salvando o modelo treinado
-joblib.dump(EmotionIA, 'EmotionIA_RF_model.pkl')
+# Salvando o modelo treinado
+import os
+models_dir = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'models')
+os.makedirs(models_dir, exist_ok=True)
 
-# Saving the TF-IDF vectorizer for future text transformations / Salvando o vetorizador TF-IDF para futuras transformações de texto
-joblib.dump(vectorizer, 'tfidf_vectorizer.pkl')
+model_path = os.path.join(models_dir, 'EmotionIA_RF_model.pkl')
+joblib.dump(EmotionIA, model_path)
+print(f"Modelo salvo como '{model_path}'!")
 
-print("Model and vectorizer saved successfully!")
+# Salvando o vetorizador TF-IDF para futuras transformações de texto
+vectorizer_path = os.path.join(models_dir, 'tfidf_vectorizer.pkl')
+joblib.dump(vectorizer, vectorizer_path)
+print(f"Vetorizador TF-IDF salvo como '{vectorizer_path}'!")
 
-# Salvar o Tokenizador
-with open('vectorizer.pkl', 'wb') as file:
-    pickle.dump(vectorizer, file)
+print("Modelo e vetorizador salvos com sucesso!")

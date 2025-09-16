@@ -1,36 +1,47 @@
-# 🎓 IT Valley School - Emotion Analysis Project
-# Machine Learning & AI Postgraduate Program
-# Dependencies for Emotion Classification Models
+# 🎓 IT Valley School - Projeto de Machine Learning
+# Programa de Pós-Graduação em Machine Learning & IA
+# Dependências Consolidadas para Todos os Módulos do Projeto
 
-# Core Machine Learning Libraries
-numpy>=1.21.0
-pandas>=1.3.0
-scikit-learn>=1.0.0
+# ===== BIBLIOTECAS PRINCIPAIS DE MACHINE LEARNING =====
+numpy>=1.24.3
+pandas>=2.0.3
+scikit-learn>=1.3.0
 joblib>=1.1.0
 
-# Deep Learning Framework
-tensorflow>=2.8.0
-keras>=2.8.0
+# ===== DEEP LEARNING FRAMEWORK =====
+tensorflow>=2.13.0
+keras>=2.13.0
 
-# Natural Language Processing
+# ===== VISÃO COMPUTACIONAL E PROCESSAMENTO DE IMAGENS =====
+opencv-python>=4.8.1.78
+Pillow>=10.0.0
+
+# ===== PROCESSAMENTO DE LINGUAGEM NATURAL =====
 nltk>=3.7
 
-# Data Visualization (for future enhancements)
-matplotlib>=3.5.0
+# ===== VISUALIZAÇÃO DE DADOS =====
+matplotlib>=3.7.2
 seaborn>=0.11.0
+plotly>=5.0.0
 
-# Development Tools
+# ===== FERRAMENTAS DE DESENVOLVIMENTO =====
 jupyter>=1.0.0
 ipython>=7.0.0
+tqdm>=4.65.0
 
-# Model Evaluation
-plotly>=5.0.0  # For interactive performance charts
-
-# Text Processing
+# ===== PROCESSAMENTO DE TEXTO =====
 regex>=2022.1.18
 
-# Progress Tracking
-tqdm>=4.62.0
-
-# Configuration Management
+# ===== UTILITÁRIOS E CONFIGURAÇÃO =====
 pyyaml>=6.0
+requests>=2.31.0
+
+# ===== FERRAMENTAS DE DESENVOLVIMENTO E TESTES =====
+pytest>=7.4.0
+flake8>=6.0.0
+black>=23.7.0
+
+# ===== MÓDULOS ESPECÍFICOS =====
+# Para análise de emoções: tensorflow, scikit-learn, nltk
+# Para detecção de gênero: opencv-python, scikit-learn
+# Para visualização: matplotlib, seaborn, plotly

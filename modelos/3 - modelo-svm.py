@@ -31,12 +31,13 @@ rotulos = [1] * 12 + [0] * 12
 vectorizer = CountVectorizer(ngram_range=(1, 2)) # Considera palavras individuais + pares de palavras
 X = vectorizer.fit_transform(frases).toarray()
 
-# exibir palavras no vocabulário
+# Exibir palavras no vocabulário
 print("Palavras do vocabulário:", vectorizer.get_feature_names_out())
 
 # Dividir os dados em treino (70%) e teste (30%)
 X_train, X_test, y_train, y_test = train_test_split(X, rotulos, test_size=0.3, random_state=42)
 
+# Criar e treinar o modelo SVM com kernel linear
 EmotionIA = SVC(kernel='linear')
 EmotionIA.fit(X_train, y_train)
 

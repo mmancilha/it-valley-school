@@ -1,137 +1,159 @@
-# 🤝 Contributing to Emotion Analysis Project
+# Guia de Contribuição
 
-## 🎓 Academic Collaboration Guidelines
+Bem-vindo ao projeto de Análise de Emoções! Este documento fornece diretrizes para contribuir com este projeto acadêmico.
 
-This project is part of the **IT Valley School AI & Machine Learning Postgraduate Program**. We welcome contributions from fellow students, researchers, and ML enthusiasts!
+## 🎯 Contexto Acadêmico
 
-## 🚀 How to Contribute
+Este projeto faz parte do programa de pós-graduação em Inteligência Artificial & Machine Learning da IT Valley School. O foco está em demonstrar aprendizado progressivo e implementação de melhores práticas da indústria.
 
-### 1. 🍴 Fork the Repository
+## 🚀 Começando
+
+### Pré-requisitos
+- Python 3.8+
+- Git
+- Ambiente virtual (recomendado)
+
+### Configuração do Ambiente
+
 ```bash
+# Clonar o repositório
 git clone https://github.com/mmancilha/it-valley-school.git
-cd emotion-analysis
-```
+cd it-valley-school
 
-### 2. 🔧 Set Up Development Environment
-```bash
-# Create virtual environment
+# Criar ambiente virtual
 python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
 
-# Install dependencies
+# Ativar ambiente virtual
+# Windows
+venv\Scripts\activate
+# Linux/Mac
+source venv/bin/activate
+
+# Instalar dependências
 pip install -r requirements.txt
 ```
 
-### 3. 🌟 Areas for Contribution
+## 📝 Diretrizes de Contribuição
 
-#### 🤖 Model Improvements
-- **Deep Learning Enhancements**: Improve the MLP model architecture
-- **New Algorithms**: Implement LSTM, BERT, or Transformer models
-- **Hyperparameter Tuning**: Optimize existing models
-- **Cross-validation**: Implement k-fold validation
+### Estrutura de Commits
+Use mensagens de commit descritivas seguindo o padrão:
+```
+tipo(escopo): descrição breve
 
-#### 📊 Data & Features
-- **Dataset Expansion**: Add more diverse emotion categories
-- **Feature Engineering**: Implement word embeddings, sentiment features
-- **Data Augmentation**: Text augmentation techniques
-- **Multilingual Support**: Extend to other languages
+Descrição mais detalhada se necessário
+```
 
-#### 🔍 Analysis & Visualization
-- **Performance Metrics**: Add precision, recall, F1-score
-- **Confusion Matrices**: Visual model evaluation
-- **Learning Curves**: Training progress visualization
-- **Feature Importance**: Model interpretability
+Exemplos:
+- `feat(model): adicionar modelo Random Forest`
+- `docs(readme): atualizar documentação de instalação`
+- `fix(preprocessing): corrigir tokenização de texto`
 
-#### 📚 Documentation
-- **API Documentation**: Code documentation improvements
-- **Tutorials**: Step-by-step guides
-- **Research Papers**: Academic references and citations
-- **Deployment Guides**: Production deployment instructions
+### Padrões de Código
+- Siga PEP 8 para código Python
+- Use nomes de variáveis descritivos
+- Adicione comentários para lógica complexa
+- Inclua docstrings para funções e classes
 
-### 4. 📝 Contribution Process
+### Documentação
+- Mantenha o README.md atualizado
+- Documente novos modelos na pasta `docs/`
+- Inclua métricas de performance para novos modelos
+- Use português para documentação principal
 
-1. **Create a Branch**
-   ```bash
-   git checkout -b feature/your-feature-name
-   ```
+## 🔬 Adicionando Novos Modelos
 
-2. **Make Changes**
-   - Follow PEP 8 coding standards
-   - Add comprehensive docstrings
-   - Include unit tests when applicable
-   - Update documentation
+### Estrutura de Arquivo
+```python
+"""
+Descrição do modelo e objetivo
+"""
 
-3. **Test Your Changes**
-   ```bash
-   python -m pytest tests/  # If tests exist
-   python api/your-model.py  # Test your implementation
-   ```
+import numpy as np
+import pandas as pd
+# outros imports necessários
 
-4. **Commit with Clear Messages**
-   ```bash
-   git add .
-   git commit -m "feat: add LSTM model for emotion classification"
-   ```
+def preprocess_data():
+    """Pré-processamento dos dados"""
+    pass
 
-5. **Push and Create Pull Request**
-   ```bash
-   git push origin feature/your-feature-name
-   ```
+def train_model():
+    """Treinamento do modelo"""
+    pass
 
-### 5. 📋 Pull Request Guidelines
+def evaluate_model():
+    """Avaliação do modelo"""
+    pass
 
-- **Title**: Clear, descriptive title
-- **Description**: Explain what you've implemented and why
-- **Testing**: Describe how you tested your changes
-- **Documentation**: Update relevant documentation
-- **Performance**: Include accuracy/performance metrics if applicable
+if __name__ == "__main__":
+    # Execução principal
+    pass
+```
 
-## 🎯 Academic Standards
+### Métricas Obrigatórias
+- Acurácia
+- Tempo de treinamento
+- Tamanho do dataset
+- Parâmetros do modelo
 
-### Code Quality
-- ✅ Clean, readable code with comments
-- ✅ Proper error handling
-- ✅ Consistent naming conventions
-- ✅ Modular, reusable functions
+## 📊 Padrões de Avaliação
 
-### Documentation
-- ✅ Clear README updates
-- ✅ Inline code documentation
-- ✅ Performance metrics reporting
-- ✅ Academic references when applicable
+### Métricas de Performance
+Todos os modelos devem reportar:
+- Acurácia no conjunto de teste
+- Matriz de confusão
+- Tempo de treinamento
+- Uso de memória (se relevante)
 
-### Research Ethics
-- ✅ Proper attribution of sources
-- ✅ Ethical use of data
-- ✅ Transparent methodology
-- ✅ Reproducible results
+### Formato de Saída
+```
+=== RESULTADOS DO MODELO ===
+Modelo: [Nome do Modelo]
+Dataset: [Tamanho e descrição]
+Acurácia: [X.XX%]
+Tempo de Treinamento: [X.X segundos]
+Parâmetros: [Configurações principais]
+```
 
-## 🌍 International Collaboration
+## 🎓 Objetivos Educacionais
 
-This project aims for **international standards** and **global collaboration**:
+### Foco de Aprendizado
+- Implementação de algoritmos de ML
+- Comparação de performance entre modelos
+- Melhores práticas de código
+- Documentação técnica
+- Preparação para mercado internacional
 
-- 🇺🇸 **English Documentation**: All contributions should be in English
-- 🌐 **Global Best Practices**: Follow international ML/AI standards
-- 🤝 **Cross-cultural Learning**: Welcome diverse perspectives and approaches
-- 📈 **Industry Standards**: Align with international industry practices
+### Progressão Esperada
+1. **Baseline**: Modelos simples (Regressão Logística)
+2. **Melhoria**: Algoritmos mais sofisticados (SVM, Random Forest)
+3. **Avançado**: Deep Learning e redes neurais
+4. **Otimização**: Tuning de hiperparâmetros e feature engineering
 
-## 📞 Contact & Support
+## 🌍 Padrões Internacionais
 
-- **Academic Supervisor**: IT Valley School Faculty
-- **Project Maintainer**: [Your Name]
-- **School Website**: [IT Valley School](https://br.itvalleyschool.com/)
-- **Issues**: Use GitHub Issues for bug reports and feature requests
+### Qualidade de Código
+- Código limpo e bem documentado
+- Testes unitários quando aplicável
+- Versionamento adequado de modelos
+- Reprodutibilidade dos resultados
 
-## 🏆 Recognition
+### Documentação
+- README abrangente
+- Comentários em inglês no código
+- Documentação técnica detalhada
+- Exemplos de uso claros
 
-Contributors will be:
-- ✨ Listed in project acknowledgments
-- 🎓 Recognized in academic presentations
-- 🌟 Featured in project documentation
-- 🤝 Connected with IT Valley School network
+## 📞 Contato
+
+Para dúvidas ou sugestões:
+- **Email**: mancilhamaycon@gmail.com
+- **LinkedIn**: [linkedin.com/in/mayconmancilha](https://www.linkedin.com/in/mayconmancilha/)
+- **GitHub**: [@mmancilha](https://github.com/mmancilha)
+
+## 📄 Licença
+
+Este projeto é desenvolvido para fins educacionais como parte do programa de pós-graduação da IT Valley School.
 
 ---
 
-**Thank you for contributing to advancing AI and Machine Learning education!** 🚀
-
-*This project is part of the IT Valley School postgraduate program in Artificial Intelligence and Machine Learning.*
+*Obrigado por contribuir com este projeto acadêmico! Seu envolvimento ajuda a demonstrar colaboração e melhores práticas da indústria.*

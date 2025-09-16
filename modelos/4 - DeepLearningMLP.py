@@ -1,11 +1,11 @@
-# Removido import desnecessário
-import numpy as np # Biblioteca para manipulação de arrays
-import tensorflow as tf # Biblioteca para deep learning
-from sklearn.model_selection import train_test_split # Biblioteca para divisão de dados
-from tensorflow import keras # Biblioteca para deep learning
+# Importações necessárias
+import numpy as np  # Biblioteca para manipulação de arrays
+import tensorflow as tf  # Biblioteca para deep learning
+from sklearn.model_selection import train_test_split  # Biblioteca para divisão de dados
+from tensorflow import keras  # Biblioteca para deep learning
 from sklearn.metrics import accuracy_score
-import pickle # Biblioteca para serialização de objetos
-import tensorflow as tf
+import pickle  # Biblioteca para serialização de objetos
+
 # Dataset expandido de frases -> (X) vetorizar
 sentences = [
     # HAPPY (1) / FELIZ (1) - Expandido para 75 frases
@@ -91,8 +91,8 @@ sentences = [
     "Everything feels like a struggle."
 ]
 
-# Creating labels (happy = 1, sad = 0) (Y)
-labels = np.array([1] * 75 + [0] * 75) # Now we have 150 balanced sentences!
+# Criando rótulos (feliz = 1, triste = 0) (Y)
+labels = np.array([1] * 75 + [0] * 75)  # Agora temos 150 frases balanceadas!
 # Começo da tokenização - Configuração otimizada
 max_tokens = 3000  # Vocabulário balanceado
 sequence_length = 30  # Sequência otimizada
@@ -112,12 +112,12 @@ vocab_size = len(vectorizer.get_vocabulary())
 
 # Transformar as frases em sequências numéricas
 X = vectorizer(sentences).numpy()
-# fim da tokenização
+# Fim da tokenização
 
 # Dividir os dados em treino e teste (70% treino, 30% teste)
 X_train, X_test, y_train, y_test = train_test_split(X, labels, test_size=0.3, random_state=42)
 
-# Começo da criação do modelo - Arquitetura balanceada
+# Início da criação do modelo - Arquitetura balanceada
 EmotionIA = keras.Sequential([
     keras.layers.Embedding(input_dim=vocab_size, output_dim=512, mask_zero=True),  # Embedding otimizado
     keras.layers.SpatialDropout1D(0.3),  # Dropout para regularização
@@ -159,7 +159,7 @@ y_pred_nn = (EmotionIA.predict(X_test) > 0.5).astype(int).flatten()
 
 # Avaliar o modelo
 accuracy_nn = accuracy_score(y_test, y_pred_nn)
-print(f"Deep Neural Network (Optimized) Accuracy: {accuracy_nn:.2f}")
+print(f"Acurácia da Rede Neural Profunda (Otimizada): {accuracy_nn:.2f}")
 
 # Salvar o modelo
 import os
@@ -173,6 +173,6 @@ print(f"Modelo salvo como '{model_path}'!")
 vectorizer_path = os.path.join(models_dir, 'vectorizer.pkl')
 with open(vectorizer_path, 'wb') as file:
     pickle.dump(vectorizer, file)
-print(f"Vectorizer salvo como '{vectorizer_path}'!")
+print(f"Vetorizador salvo como '{vectorizer_path}'!")
 
-print("Model and vectorizer saved successfully!")
+print("Modelo e vetorizador salvos com sucesso!")
