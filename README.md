@@ -1,5 +1,45 @@
+# Maycon Mancilha | Automation & AI Developer
+
+<p align="left">
+  <a href="https://www.linkedin.com/in/mayconmancilha/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+  <a href="mailto:mancilhamaycon@gmail.com"><img src="https://img.shields.io/badge/-Email-D14836?style=flat-square&logo=gmail&logoColor=white" alt="Email"></a>
+  <img src="https://komarev.com/ghpvc/?username=mmancilha&color=green" alt="Profile views" />
+</p>
+
+Minha jornada na automação começou quando criei um robô para fazer meu próprio trabalho e fui promovido. Essa experiência define minha filosofia: **eu não apenas otimizo processos, eu os transformo para liberar o potencial humano para atividades de maior valor.**
+
+Com uma trajetória que começou no centro das operações de negócio, minha vantagem é entender a dor do negócio antes de desenhar a arquitetura da solução. Atuo como a ponte entre a estratégia e a execução técnica, combinando essa vivência com uma base acadêmica sólida, incluindo um **MBA em Engenharia de Software** e uma pós-graduação em **Inteligência Artificial & Machine Learning**.
+
+Como desenvolvedor, meu foco é resolver problemas, liderar tecnicamente e entregar automações que geram valor real para o negócio.
+
+### Na prática, isso se traduz em resultados concretos:
+
+- **Desenvolvimento de soluções em DocuSign CLM** que reduzem o tempo de criação e gestão de contratos em mais de 90%.
+- **Criação de robôs com UiPath (RPA)** que economizam mais de 40 horas mensais de trabalho manual, liberando analistas para focarem em atividades estratégicas.
+- **Implementação de integrações com n8n e Python** que centralizam dados e eliminam gargalos operacionais.
+
+## 🛠️ Minha Stack de Tecnologias e Ferramentas
+
+### Automação & Low-Code
+![n8n](https://img.shields.io/badge/-n8n-1A1A1A?style=flat-square&logo=n8n&logoColor=white)
+![UiPath](https://img.shields.io/badge/-UiPath-0055A6?style=flat-square&logo=uipath&logoColor=white)
+![Power Automate](https://img.shields.io/badge/-Power%20Automate-0066CC?style=flat-square&logo=microsoftpowerautomate&logoColor=white)
+
+### Linguagens & Frameworks
+![Python](https://img.shields.io/badge/Python-3776AB?style=flat-square&logo=python&logoColor=white)
+![C#](https://img.shields.io/badge/C%23-239120?style=flat-square&logo=c-sharp&logoColor=white)
+
+### IA & Machine Learning
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931A?style=flat-square&logo=scikit-learn&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat-square&logo=tensorflow&logoColor=white)
+
+---
+
+## 🎓 Jornada de Especialização em Inteligência Artificial & Machine Learning
+
+Atualmente, estou aprofundando meus conhecimentos na **pós-graduação em Inteligência Artificial & Machine Learning** pela **IT Valley School**, com foco em padrões internacionais da indústria. Esta seção documenta de forma detalhada os projetos, aprendizados e a evolução técnica durante o curso, demonstrando a aplicação prática dos conceitos estudados.
+
 # 🎭 Análise de Emoções com Machine Learning
-**IT Valley School - Pós-Graduação em Inteligência Artificial & Machine Learning**
 
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.0+-orange.svg)](https://scikit-learn.org)
@@ -12,12 +52,9 @@
 [![Modelos](https://img.shields.io/badge/Modelos-4-blue.svg)](modelos/)
 [![Documentação](https://img.shields.io/badge/Documentação-Completa-brightgreen.svg)](MODELOS-DOCUMENTACAO.md)
 
-> **Projeto Acadêmico** | IT Valley School - Pós-Graduação em Inteligência Artificial & Machine Learning  
-> **Objetivo**: Desenvolver expertise para oportunidades internacionais em IA/ML
-
 ## 🎯 Visão Geral do Projeto
 
-Este repositório apresenta um sistema abrangente de análise de emoções que classifica texto como expressando **felicidade** ou **tristeza** usando múltiplas abordagens de machine learning. O projeto demonstra a evolução de técnicas tradicionais de ML para deep learning, com melhorias progressivas de performance.
+Este repositório apresenta um sistema abrangente de análise de emoções que classifica texto como expressando **felicidade** ou **tristeza** usando múltiplas abordagens de machine learning. O projeto demonstra a evolução de técnicas tradicionais de ML para deep learning, com melhorias progressivas de performance, desenvolvido como parte da pós-graduação em IA & ML pela IT Valley School com foco em expertise para oportunidades internacionais.
 
 ## 🚀 Evolução da Performance dos Modelos
 
@@ -28,7 +65,13 @@ Este repositório apresenta um sistema abrangente de análise de emoções que c
 | 🌲 Random Forest | **67%** | +34% | **Método ensemble, melhor ML tradicional** | ✅ Completo |
 | 🧠 Deep Learning MLP | **84%** | +51% | **Rede neural otimizada com LSTM** | ✅ Completo |
 
-### 📈 Visualização da Evolução de Performance
+A transição do modelo baseline (33%) para a rede neural profunda (84%) representa uma **melhoria de 155%**, demonstrando a capacidade de otimizar e escalar soluções de IA.
+
+> 🔗 **Para uma análise técnica aprofundada**, incluindo a arquitetura dos modelos, o pipeline de dados e os códigos-fonte, **[acesse o repositório completo do projeto aqui](https://github.com/mmancilha/it-valley-school)**.
+
+---
+
+### 📈 Análise de Performance
 
 ```
 Progresso de Acurácia:
@@ -41,8 +84,7 @@ Progresso de Acurácia:
     0%    10%   20%   30%   40%   50%   60%   70%   80%   90%   100%
 ```
 
-### 📈 Análise de Performance
-
+**Principais Resultados:**
 - **155% de melhoria** do baseline para o melhor modelo (33% → 84%)
 - **Deep Learning MLP** alcançou a maior acurácia, superando ML tradicional
 - **Arquitetura avançada** com LSTM, dropout e hiperparâmetros otimizados
@@ -138,8 +180,6 @@ pip install scikit-learn tensorflow numpy matplotlib joblib
 ### Executar Modelos Individuais
 
 ```bash
-# Executar Modelos Individuais
-
 # Regressão Logística (Baseline)
 python "modelos/1-linear_model.py"
 
@@ -183,39 +223,29 @@ Para detalhes técnicos abrangentes, consulte nossa documentação detalhada:
 
 ## 📊 Principais Insights e Aprendizados
 
-### Insights Técnicos
+**Insights Técnicos:**
 - **Engenharia de Características**: TF-IDF com bigramas melhorou significativamente a performance
 - **Qualidade do Dataset**: Datasets balanceados e diversos são cruciais para performance do modelo
 - **Seleção de Algoritmo**: Random Forest mostrou excelente performance para esta tarefa de classificação binária
 - **Consistência de Linguagem**: Padronização em inglês melhorou a generalização do modelo
 
-### Progresso Acadêmico
+**Progresso Acadêmico:**
 - **Aprendizado Progressivo**: Cada modelo construído sobre lições das implementações anteriores
 - **Acompanhamento de Performance**: Documentação sistemática das melhorias
 - **Melhores Práticas**: Persistência de modelo, métricas de avaliação adequadas e organização de código
 
-## 🎓 Contexto Educacional
+## 🎓 Contexto Educacional e Preparação Internacional
 
 **Instituição**: [IT Valley School](https://br.itvalleyschool.com/)  
 **Programa**: Pós-graduação em Inteligência Artificial & Machine Learning  
-**Foco**: Implementação prática de IA/ML com padrões internacionais da indústria  
-**Objetivo**: Construir expertise para oportunidades globais em IA/ML
+**Foco**: Implementação prática de IA/ML com padrões internacionais da indústria para oportunidades globais
 
-### Habilidades Demonstradas
-- **Machine Learning**: Aprendizado supervisionado, algoritmos de classificação
-- **Deep Learning**: Redes neurais, embeddings, TensorFlow/Keras
+### Habilidades e Competências Demonstradas
+- **Machine Learning & Deep Learning**: Algoritmos de classificação, redes neurais, embeddings, TensorFlow/Keras
 - **Ciência de Dados**: Engenharia de características, avaliação de modelos, otimização de performance
-- **Engenharia de Software**: Organização de código, persistência de modelo, documentação
-- **Pesquisa**: Experimentação sistemática e análise de performance
-
-## 🌍 Preparação Internacional
-
-Este projeto demonstra:
-- **Proficiência em inglês** na documentação técnica
-- **Ferramentas padrão da indústria** e metodologias
-- **Aprendizado progressivo** e otimização de performance
-- **Organização profissional de código** e documentação
-- **Rigor acadêmico** com avaliação sistemática
+- **Engenharia de Software**: Organização profissional de código, persistência de modelo, documentação técnica
+- **Pesquisa e Metodologia**: Experimentação sistemática, análise de performance e rigor acadêmico
+- **Padrões Internacionais**: Proficiência em inglês, ferramentas da indústria e aprendizado progressivo
 
 ## 🔮 Melhorias Futuras
 
@@ -226,16 +256,9 @@ Este projeto demonstra:
 - [ ] **Visualização**: Gráficos de performance e ferramentas de interpretação de modelo
 - [ ] **Teste A/B**: Comparar performance de modelos em cenários de produção
 
-## 📞 Contato e Colaboração
+## 📞 Contato
 
-**Estudante**: Maycon Mancilha  
-**Instituição**: IT Valley School  
-**Programa**: Pós-graduação em IA & Machine Learning  
+**Maycon Mancilha** | Automation & AI Developer  
 **Email**: [mancilhamaycon@gmail.com](mailto:mancilhamaycon@gmail.com)  
 **LinkedIn**: [linkedin.com/in/mayconmancilha](https://www.linkedin.com/in/mayconmancilha/)  
-**GitHub**: [@mmancilha](https://github.com/mmancilha)  
-**Objetivo**: Buscando oportunidades internacionais em IA/ML
-
----
-
-*Este projeto representa trabalho acadêmico em busca de oportunidades internacionais de carreira em IA/ML. Todas as implementações seguem as melhores práticas da indústria e demonstram aprendizado progressivo em inteligência artificial e machine learning.*
+**GitHub**: [@mmancilha](https://github.com/mmancilha)
